@@ -1,0 +1,44 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+      (click)="changeMenu()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Jorge Alvarado</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button aria-label="Portafolio">
+      <mat-icon>topic</mat-icon>
+    </button>
+    <button mat-icon-button  aria-label="Acerca de">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Contacto">
+      <mat-icon>phone</mat-icon>
+    </button>
+</mat-toolbar>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" class="app-sidenav" opened="getOpenMenu()" >
+      <mat-nav-list>
+          <mat-list-item routerLink="/">
+              <mat-icon>dashboard</mat-icon><span>Dashboard</span>
+          </mat-list-item>
+  
+
+              <mat-nav-list>
+                  <a mat-list-item routerLink="/textarea">
+                      <mat-icon>subject</mat-icon><span> Proyectos</span>
+                  </a>
+
+              </mat-nav-list>
+   
+
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <router-outlet>
+          <div class="app-sidenav-content">
+          </div>
+      </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

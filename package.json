@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "chartjs-chart-treemap": "^2.3.0"
+  }
+}

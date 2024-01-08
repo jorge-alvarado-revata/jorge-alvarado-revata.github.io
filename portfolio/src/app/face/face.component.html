@@ -1,5 +1,5 @@
-<div >
-    <mat-card class="my-card">
+<div class="board">
+    <mat-card class="my-card" >
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>Jorge Alvarado</mat-card-title>
@@ -8,7 +8,16 @@
 
         <mat-card-content>
           <p>
-            <canvas #chartArea class="board" ></canvas>
+            <canvas #chartArea id="chartArea"
+            baseChart
+            class="chart"
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [type]="barChartType"
+            >
+
+            </canvas>
           </p>
         </mat-card-content>
         <mat-card-actions>

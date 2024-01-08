@@ -1,8 +1,18 @@
+
+.board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .my-card {
-    width:fit-content;
+    width:99%;
+    height: 99%;
+   
+}
 
-
-
+.canvas {
+    width: 70%;
 }
 
 .example-header-image {
@@ -10,6 +20,3 @@
     background-size: cover;
   }
 
-.board{
-    max-width:100%;
-}
